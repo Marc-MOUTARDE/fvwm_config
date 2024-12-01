@@ -1,0 +1,30 @@
+# Bureau
+DesktopSize 1x1
+DesktopName 1 Main
+
+# Fermer, Plein ecrant, Icone
+Mouse 1 2 A Close
+Mouse 1 4 A Maximize
+Mouse 1 6 A Iconify
+
+# Style bordure
+BorderStyle Simple -- HiddenHandles NoInset Raised Flat
+
+# Style
+Style * CirculateSkip, Sticky
+Style * HandleWidth 2, BorderWidth 2
+Style * ClickToFocus
+
+TitleStyle Centered Height 20 -- Flat
+ButtonStyle Reset
+ButtonStyle All -- Flat
+ButtonStyle All -- UseTitleStyle
+
+*FvwmButtons: Rows 1
+*FvwmButtons: (Title "Terminal", Action (Mouse1) Exec exec alacritty)
+
+# Execution
+Exec exec feh --bg-fill ~/Images/background.png
+Exec exec ~/.config/picom/launch.sh
+Exec exec alacritty
+Exec exec firefox
